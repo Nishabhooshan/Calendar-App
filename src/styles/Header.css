@@ -1,0 +1,40 @@
+.circle {
+    width: 30px;
+    height: 30px;
+    background-color: #f89d2a;
+    border-radius: 50%;
+}
+  
+.search-bar {
+    width: 200px;
+}
+  
+.icon-container {
+    position: relative;
+}
+  
+.icon {
+    color: #6c757d;
+    cursor: pointer;
+}
+  
+.badge {
+    position: absolute;
+    top: -8px;
+    left: 12px;
+    background-color: red;
+    color: white;
+    font-size: 10px;
+    padding: 2px 5px;
+    border-radius: 50%;
+}
+  
+.profile-img {
+    width: 30px;
+    height: 30px;
+}
+  
+.profile-name {
+    font-weight: 600;
+    color: #000;
+}

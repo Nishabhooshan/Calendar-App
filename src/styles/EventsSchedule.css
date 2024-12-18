@@ -1,0 +1,71 @@
+.schedule-container {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-top: 20px;
+        width: 100%;
+      }
+      
+      .schedule-container h2 {
+        text-align: center;
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+      
+   
+      .schedule {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        gap: 10px;
+      }
+      
+  
+      .time-slots {
+        display: flex;
+        flex-direction: column;
+        border-right: 1px solid #ddd;
+      }
+      
+      .time-slot {
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        color: #333;
+        border-bottom: 1px solid #ddd;
+      }
+      
+    
+      .events {
+        display: grid;
+        grid-template-rows: repeat(12, 50px);
+        position: relative;
+      }
+      
+      .event {
+        padding: 10px;
+        border-radius: 8px;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 2px;
+      }
+      
+      .event-details {
+        text-align: left;
+      }
+      
+      .event-details h3 {
+        margin: 0;
+        font-size: 14px;
+        font-weight: bold;
+      }
+      
+      .event-details p {
+        margin: 0;
+        font-size: 12px;
+      }
+      

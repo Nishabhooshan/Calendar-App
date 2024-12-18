@@ -1,0 +1,103 @@
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    overflow-y: auto;
+}
+  
+.menu-item {
+    cursor: pointer;
+    font-size: 14px;
+    color: #333;
+}
+  
+.menu-icon {
+    color: #6c757d;
+    font-size: 16px;
+}
+  
+.menu-link {
+    color: #6c757d;
+    font-size: 13px;
+    padding: 5px 0;
+}
+  
+.menu-link.active {
+    color: #007bff;
+    font-weight: bold;
+}
+  
+.section-title {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+}
+  
+.schedule-item {
+    display: flex;
+    align-items: center;
+}
+  
+.schedule-item input {
+    display: none;
+}
+  
+.schedule-item label {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    margin-right: 8px;
+    border-radius: 3px;
+    border: 2px solid transparent;
+    position: relative;
+    cursor: pointer;
+}
+  
+.schedule-item.event-1 label {
+    background-color: #ffc107;
+}
+  
+.schedule-item.event-2 label {
+    background-color: #17a2b8;
+}
+  
+.schedule-item.event-3 label {
+    background-color: #6f42c1;
+}
+  
+.schedule-item.event-4 label {
+    background-color: #343a40;
+}
+  
+.schedule-item.event-5 label {
+    background-color: #6610f2;
+}
+  
+.schedule-item input:checked + label::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 5px;
+    width: 4px;
+    height: 8px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+  
+.upcoming-event-card {
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+  
+.event-img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+  
+.upcoming-event-card div {
+    font-size: 14px;
+    color: #333;
+}
