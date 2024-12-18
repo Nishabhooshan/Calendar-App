@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import { FaChevronLeft, FaChevronRight, FaCalendarAlt, FaCaretDown } from 'react-icons/fa';
 import '../styles/Calendar.css';
 
@@ -7,24 +7,24 @@ const Calendar = () => {
   const [view, setView] = useState('month');
   const [showDropdown, setShowDropdown] = useState(false);
 
-  const formatDate = (date) => {
+  const formatDate = useCallback((date) => {
     const options = { weekday: 'long', day: 'numeric', month: 'numeric', year: 'numeric' };
     return date.toLocaleDateString('en-US', options);
-  };
+  }, []);
 
-  const handleNavigate = (direction) => {
+  const handleNavigate = useCallback((direction) => {
     const newDate = new Date(currentDate);
     newDate.setMonth(currentDate.getMonth() + direction);
     setCurrentDate(newDate);
-  };
+  }, [currentDate]);
 
-  const handleToday = () => {
+  const handleToday = useCallback(() => {
     setCurrentDate(new Date());
-  };
+  }, []);
 
-  const toggleDropdown = () => {
-    setShowDropdown(!showDropdown);
-  };
+  const toggleDropdown = useCallback(() => {
+    setShowDropdown((prev) => !prev);
+  }, []);
 
   return (
     <div className="calendar-container">

@@ -1,71 +1,81 @@
-# Getting Started with Create React App
+# Caldendar-app
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+This project contains a set of reusable React components for a calendar and event scheduling system. The components are designed to be modular, responsive, and optimized for performance. They utilize modern React features like hooks and memoization for efficient rendering.
 
-In the project directory, you can run:
+## Components
 
-### `npm start`
+### 1. **Calendar Component**
+   - **Description**: A responsive calendar component that allows users to navigate through dates and view the current date.
+   - **Features**:
+     - Display of the current date.
+     - Navigation buttons to move between months.
+     - Dropdown menu for selecting the calendar region (e.g., India, USA, UK).
+     - View options for Day, Week, Month, and Year.
+     - A "Today" button to quickly return to the current date.
+   - **Technologies Used**: 
+     - React
+     - `react-icons` for icons
+     - Custom CSS for styling
+   - **Optimization**: Utilized `useCallback` for memoization to optimize performance and prevent unnecessary re-renders.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 2. **Events Schedule Component**
+   - **Description**: A component that displays upcoming scheduled events with time slots.
+   - **Features**:
+     - Time slots are displayed for each hour from 7 AM to 6 PM.
+     - Events are color-coded and displayed based on their start and end times.
+     - Ability to see multiple events overlapping in a time slot.
+     - Events are dynamically displayed based on time.
+   - **Technologies Used**: 
+     - React
+     - CSS for custom styling
+   - **Optimization**: Performance optimizations for rendering events efficiently without unnecessary updates.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 3. **Header Component**
+   - **Description**: A navigation header that includes icons for home, star, calendar, notifications, and profile.
+   - **Features**:
+     - Search bar for finding items quickly.
+     - Icons for home, favorites, calendar, comments, and notifications.
+     - Profile picture and name displayed with a badge showing unread messages or notifications.
+   - **Technologies Used**:
+     - React
+     - `react-icons` for icons
+     - Bootstrap for layout and responsiveness
+     - Custom CSS for styling
+   - **Optimization**: Clean and efficient layout using Bootstrap's flex utilities for responsive design.
 
-### `npm test`
+## Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Responsive Design**: All components are fully responsive, optimized for different screen sizes and devices. The layout adapts to ensure a seamless user experience across desktop, tablet, and mobile views.
+  
+- **Customizable Components**: Each component is easily customizable. You can modify the view (e.g., calendar views like Day, Week, Month, Year), adjust event data, and customize styling to fit the needs of your project.
 
-### `npm run build`
+- **Performance Optimized**: The components are optimized for performance. React hooks like `useState`, `useCallback`, and memoization are used to ensure minimal re-renders, reducing unnecessary updates to the DOM.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **User-Friendly Interface**: The calendar, event schedules, and header components are designed with user experience in mind, ensuring easy navigation and readability.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Modular Design**: The components are modular, allowing you to integrate or update individual pieces without impacting the rest of the application. This modularity enhances maintainability and scalability.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Technologies Used
 
-### `npm run eject`
+- **React**: The primary library used for building user interfaces. React components are the backbone of this project, handling the rendering of the UI and managing application state.
+  
+- **React Hooks**:
+  - `useState`: For managing state within components (e.g., current date, view selection).
+  - `useCallback`: For memoizing functions to prevent unnecessary re-renders in the calendar component.
+  
+- **React Icons**: A library that provides scalable icons used throughout the project (e.g., for navigation buttons, notifications, etc.).
+  
+- **Bootstrap**: A front-end framework used for layout and responsive design. The components leverage Bootstrap's flex utilities for flexible, grid-based layouts that work across devices.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **CSS**: Custom CSS used to style components and ensure they align with the design specifications. Each component has its own set of styles, making it easy to modify or extend.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Installation
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+To run this project locally:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. Clone the repository to your local machine:
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# Calendar-App
+   ```bash
+   git clone git@github.com:Nishabhooshan/Calendar-App.git
